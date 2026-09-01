@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign In — Burrow &amp; Bark</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">Burrow <span>&amp;</span> Bark</div>
+    <button class="nav-toggle" id="navToggle">&#9776;</button>
+    <nav id="mainNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dogs.html">Dogs</a></li>
+        <li><a href="cats.html">Cats</a></li>
+        <li><a href="birds.html">Birds</a></li>
+        <li><a href="fish.html">Fish</a></li>
+        <li><a href="small-pets.html">Small Pets</a></li>
+      </ul>
+    </nav>
+    <div class="auth-links" id="authLinks">
+      <span id="authStatus">Not signed in</span>
+      <a href="login.html" class="btn-outline" id="signInBtn">Sign in</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== Login Form ===== -->
+    <div class="form-wrapper" id="loginBox">
+      <h1>Welcome back</h1>
+      <p class="subtitle">Sign in to see your full pet care guide.</p>
+
+      <div class="success-banner" id="loginSuccess">Signed in successfully! Redirecting to home...</div>
+
+      <form id="loginForm" novalidate>
+        <div class="form-group" id="loginEmailGroup">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" placeholder="you@example.com">
+          <div class="error-message">Please enter a valid email address.</div>
+        </div>
+
+        <div class="form-group" id="loginPasswordGroup">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" placeholder="Enter your password">
+          <div class="error-message">Password must be at least 6 characters.</div>
+        </div>
+
+        <button type="submit" class="btn-primary">Sign In</button>
+      </form>
+
+      <p class="form-footer-note">
+        Don't have an account?
+        <a href="#" id="showSignup" style="color:#e8871e; font-weight:bold;">Create one</a>
+      </p>
+    </div>
+
+    <!-- ===== Signup Form (hidden by default) ===== -->
+    <div class="form-wrapper" id="signupBox" style="display:none;">
+      <h1>Create your account</h1>
+      <p class="subtitle">It's free — just a few details to get started.</p>
+
+      <div class="success-banner" id="signupSuccess">Account created successfully! Redirecting to home...</div>
+
+      <form id="signupForm" novalidate>
+        <div class="form-group" id="signupNameGroup">
+          <label for="signupName">Full Name</label>
+          <input type="text" id="signupName" placeholder="Your name">
+          <div class="error-message">Please enter your name.</div>
+        </div>
+
+        <div class="form-group" id="signupEmailGroup">
+          <label for="signupEmail">Email</label>
+          <input type="email" id="signupEmail" placeholder="you@example.com">
+          <div class="error-message">Please enter a valid email address.</div>
+        </div>
+
+        <div class="form-group" id="signupPasswordGroup">
+          <label for="signupPassword">Password</label>
+          <input type="password" id="signupPassword" placeholder="At least 6 characters">
+          <div class="error-message">Password must be at least 6 characters.</div>
+        </div>
+
+        <div class="form-group" id="signupPetGroup">
+          <label for="signupPet">Which pet do you have?</label>
+          <select id="signupPet">
+            <option value="">Select one</option>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="bird">Bird</option>
+            <option value="fish">Fish</option>
+            <option value="small-pet">Small Pet</option>
+          </select>
+          <div class="error-message">Please select a pet.</div>
+        </div>
+
+        <button type="submit" class="btn-primary">Create Account</button>
+      </form>
+
+      <p class="form-footer-note">
+        Already have an account?
+        <a href="#" id="showLogin" style="color:#e8871e; font-weight:bold;">Sign in</a>
+      </p>
+    </div>
+
+  </main>
+
+  <footer>
+    Burrow &amp; Bark — general information only, not a substitute for veterinary advice.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

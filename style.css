@@ -1,0 +1,357 @@
+/* ===== Burrow & Bark — style.css ===== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #2b2b2b;
+  background-color: #fdf8f0;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== Header / Navigation ===== */
+header {
+  background-color: #14213d;
+  color: #ffffff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header .logo span {
+  color: #e8871e;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  padding: 6px 4px;
+  border-bottom: 2px solid transparent;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  border-bottom: 2px solid #e8871e;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.auth-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.auth-links .btn-outline {
+  border: 1px solid #ffffff;
+  padding: 6px 14px;
+  border-radius: 4px;
+}
+
+.auth-links .btn-outline:hover {
+  background-color: #ffffff;
+  color: #14213d;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  background: linear-gradient(135deg, #1d4e42, #14332b);
+  color: #ffffff;
+  padding: 60px 30px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  max-width: 650px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 600px;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-stats div {
+  border-left: 3px solid #e8871e;
+  padding-left: 12px;
+}
+
+.hero-stats strong {
+  font-size: 26px;
+  display: block;
+}
+
+/* ===== Sections ===== */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 30px;
+}
+
+.section-title {
+  margin-bottom: 10px;
+  font-size: 26px;
+  color: #14213d;
+}
+
+.section-subtitle {
+  color: #555555;
+  margin-bottom: 30px;
+  max-width: 650px;
+}
+
+/* ===== Pet Cards ===== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e2ddd2;
+  border-radius: 8px;
+  padding: 25px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.card .icon {
+  font-size: 32px;
+}
+
+.card h3 {
+  margin: 12px 0 10px 0;
+  color: #14213d;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 15px;
+}
+
+.card a.link {
+  font-weight: bold;
+  color: #14213d;
+  border-top: 1px solid #e2ddd2;
+  padding-top: 10px;
+  display: inline-block;
+}
+
+/* ===== Pet Detail Page ===== */
+.pet-hero {
+  background-color: #1d4e42;
+  color: #ffffff;
+  padding: 40px 30px;
+  text-align: left;
+}
+
+.pet-hero h1 {
+  font-size: 34px;
+}
+
+.info-block {
+  background-color: #ffffff;
+  border: 1px solid #e2ddd2;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 25px;
+}
+
+.info-block h2 {
+  color: #14213d;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.info-block ul {
+  margin-left: 20px;
+}
+
+.info-block ul li {
+  margin-bottom: 6px;
+}
+
+/* ===== Forms (Login / Signup / Contact) ===== */
+.form-wrapper {
+  max-width: 420px;
+  margin: 60px auto;
+  background-color: #ffffff;
+  border: 1px solid #e2ddd2;
+  border-radius: 8px;
+  padding: 35px;
+}
+
+.form-wrapper h1 {
+  color: #14213d;
+  margin-bottom: 8px;
+  font-size: 26px;
+}
+
+.form-wrapper p.subtitle {
+  color: #555555;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #14213d;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cfc9bc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #e8871e;
+}
+
+.error-message {
+  color: #b3261e;
+  font-size: 13px;
+  margin-top: 5px;
+  display: none;
+}
+
+.form-group.invalid .error-message {
+  display: block;
+}
+
+.form-group.invalid input {
+  border-color: #b3261e;
+}
+
+.btn-primary {
+  width: 100%;
+  background-color: #e8871e;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: #cf7714;
+}
+
+.form-footer-note {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.success-banner {
+  background-color: #e4f3e6;
+  border: 1px solid #4caf50;
+  color: #256029;
+  padding: 12px 16px;
+  border-radius: 4px;
+  margin-bottom: 18px;
+  display: none;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #14213d;
+  color: #ffffff;
+  text-align: center;
+  padding: 18px;
+  font-size: 14px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    width: 100%;
+    order: 3;
+  }
+
+  nav.open {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid #2a3a5c;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  header {
+    position: relative;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+}
